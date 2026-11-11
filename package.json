@@ -1,0 +1,32 @@
+{
+  "name": "llantera-zapata",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelluis912/llantera.zapata.git"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/miguelluis912/llantera.zapata/issues"
+  },
+  "homepage": "https://github.com/miguelluis912/llantera.zapata#readme",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "private": true,
+  "dependencies": {
+    "gsap": "^3.15.1",
+    "vue": "^3.5.45"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "tailwindcss": "^4.3.5",
+    "vite": "^8.3.7"
+  }
+}

@@ -1,0 +1,126 @@
+@layer theme, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities) important;
+
+@source not inline("container");
+@theme {
+  --color-paper: #f7f9fa;
+  --color-charcoal: #142832;
+  --color-rule: #d8e2e6;
+  --font-editorial: Georgia, 'Times New Roman', serif;
+}
+
+.landing {
+  color: var(--color-charcoal);
+  background: var(--color-paper);
+  --line: var(--color-rule);
+}
+.landing h1,
+.landing h2,
+.landing h3 {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+}
+.landing h1 {
+  line-height: 0.98;
+}
+.landing .eyebrow {
+  letter-spacing: 0.19em;
+}
+.landing .button {
+  border-radius: 0.25rem;
+}
+.landing .request-form {
+  border-radius: 0.3rem;
+}
+.landing .media-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.landing .gallery-tile:hover img {
+  transform: scale(1.05);
+}
+.landing .brand-section {
+  background: var(--color-paper);
+  border-block: 1px solid var(--color-rule);
+}
+.landing .brand-grid li {
+  border-radius: 0.2rem;
+}
+.site-header--landing {
+  position: fixed;
+  inset: 0 0 auto;
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease;
+}
+.site-header--landing.is-solid {
+  background: var(--nav-solid);
+}
+.landing .contact-anchor {
+  scroll-margin-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing .media-img,
+  .site-header--landing {
+    transition: none;
+  }
+  .landing .gallery-tile:hover img {
+    transform: none;
+  }
+}
+
+.site-footer--landing {
+  background: var(--nav-solid);
+}
+.site-footer--landing a {
+  color: var(--accent-light);
+}
+
+.landing-service-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-rule);
+  border-radius: .35rem;
+  background: var(--color-paper);
+}
+.landing-service-card__media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+.landing-service-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s cubic-bezier(.22, 1, .36, 1);
+}
+.landing-service-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: start;
+  padding: 1.35rem;
+}
+.landing-service-card__body h3 {
+  margin: 0 0 .65rem;
+  font-size: 1.75rem;
+}
+.landing-service-card__body .button {
+  margin-top: auto;
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .landing-service-card:hover img {
+    transform: scale(1.05);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .landing-service-card__media img {
+    transition: none;
+  }
+}
